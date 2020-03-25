@@ -1,0 +1,30 @@
+# This file is Copyright (c) 2019 Florent Kermarrec <florent@enjoy-digital.fr>
+# License: BSD
+
+{
+    # PHY ----------------------------------------------------------------------
+    "phy":            "USPCIEPHY", # Type of PCIe PHY
+    "phy_device":     "Kintex Ultrascale",      # Type of Device
+    "phy_lanes":      4,           # Number of lanes
+    "phy_data_width": 64,          # Bus data_width
+    "phy_bar0_size":  0x40000,     # BAR0 size
+
+    # Clocking -----------------------------------------------------------------
+    "clk_freq":     125e6,         # User Clk Freq (AXI MMAP/DMA)
+    "clk_external": False,         # Use external User provided Clk
+
+    # MMAP ---------------------------------------------------------------------
+    "mmap":      True,
+    "mmap_base": 0x00020000,
+    "mmap_size": 0x00020000,
+
+    # DMA channels -------------------------------------------------------------
+    "dma_channels":     4,         # Number of DMA channels
+    "dma_buffering":    8192,      # Buffering for each channel (in bytes)
+    "dma_loopback":     True,      # Enable DMA loopback capability
+    "dma_synchronizer": True,      # Enable DMA synchronizer capability
+    "dma_monitor":      True,      # Enable DMA monitoring capability
+
+    # MSI IRQs -----------------------------------------------------------------
+    "msi_irqs": 16,                # Number or MSI IRQs
+}
